@@ -17,6 +17,7 @@
             color: #333;
             margin: 0;
             padding: 0;
+            position: relative;
         }
 
         @keyframes gradient {
@@ -71,6 +72,8 @@
         }
         .animation-container {
             position: relative;
+            top: 30px;
+            left: 120px;
             height: 120px; /* Increased height to accommodate all the text */
             overflow: hidden;
             margin-left: 20px;
@@ -85,12 +88,19 @@
 
         .contact-form {
             position: absolute;  
-            top: 5px;
-            left: 0;  /* add this to position the container to the left */
-            width: 300px;  /* adjust this as necessary */
+            top: 160px;
+            left: 0;
+            width: 100px;  /* adjust this as necessary */
             padding: 20px;
             background-color: rgba(255,255,255,0.8);
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 1001;
+        }
+
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
         }
 
         @keyframes scroll-up {
@@ -148,7 +158,19 @@
             <h3>Project 2</h3>
             <p>Description of Project 2...</p>
         </div>
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img src="project-3.jpg" alt="Project 3">
+            <h3>Project 3</h3>
+            <p>Description of Project 3...</p>
+        </div>
 
+        <!-- Project 4 -->
+        <div class="project-card">
+            <img src="project-4.jpg" alt="Project 4">
+            <h3>Project 4</h3>
+            <p>Description of Project 4...</p>
+        </div>
         <!-- Add more projects as needed... -->
     </div>
 <table>
