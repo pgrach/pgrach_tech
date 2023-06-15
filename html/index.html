@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Paul Grach</title>
+    <title>Paul Mousset</title>
     <meta name="description" content="Generalist at planet Earth. Harvard may have missed me. I love to make stuff."></meta>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -71,14 +71,23 @@
             line-height: 1.5;
         }
         .animation-container {
-            position: relative;
-            top: 30px;
-            left: 120px;
-            height: 120px; /* Increased height to accommodate all the text */
+            position: absolute;
+            top: 110px; /* adjust according to your need */
+            left: 120px; /* adjust according to your need */
+            height: 20px;
             overflow: hidden;
-            margin-left: 20px;
+            width: 400px;
+            z-index: 1002;
         }
         
+        .fixed-text {
+            font-family: 'League Gothic', sans-serif;
+            position: absolute;
+            top: 99px; /* adjust according to your need */
+            left: 20px; /* adjust according to your need */
+            z-index: 1002;
+        }
+
         .animated-text {
             position: absolute;
             width: 100%;
@@ -87,7 +96,7 @@
         }
 
         .contact-form {
-            position: absolute;  
+            position: absolute; 
             top: 160px;
             left: 0;
             width: 100px;  /* adjust this as necessary */
@@ -115,7 +124,7 @@
 </head>
 <body>
     <div class="header">
-        <h1>Paul Grach</h1>
+        <h1>Paul Mousset</h1>
         <p>Projects built during the JustIT bootcamp</p>
     </div>
     
@@ -130,8 +139,13 @@
         </form>
     </div>
 
+    
+    <div class="fixed-text">
+        <p>Why are you here?</p>
+    </div>
+
     <div class="animation-container">
-        <div class="animated-text" style="font-family: 'League Gothic', sans-serif;">
+        <div class="animated-text">
           <p>'googled pavel grachev'</p>
           <p>'you followed a link'</p>
           <p>'you are my friend'</p>
@@ -140,7 +154,6 @@
           <p>'you are looking for a co-founder'</p>
           <p>'your cat jumped on keyboard'</p>
         </div>
-      </div>
 
 </div>
 
