@@ -1,0 +1,128 @@
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, #3f87a6, #ebf8e1, #f69d3c);
+            background-size: 600% 600%;
+            animation: gradient 15s ease infinite;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .project-card {
+            background-color: #fff;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex: 1 1 calc(50% - 40px);
+            margin: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+
+        .project-card img {
+            max-width: 100%;
+        }
+
+        .project-card h3 {
+            margin: 0;
+        }
+
+        .project-card p {
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+
+        .animation-container {
+            position: absolute;
+            top: 110px;
+            /* adjust according to your need */
+            left: 120px;
+            /* adjust according to your need */
+            height: 20px;
+            overflow: hidden;
+            width: 400px;
+            z-index: 1002;
+        }
+
+        .fixed-text {
+            font-family: 'League Gothic', sans-serif;
+            position: absolute;
+            top: 99px;
+            /* adjust according to your need */
+            left: 20px;
+            /* adjust according to your need */
+            z-index: 1002;
+        }
+
+        .animated-text {
+            position: absolute;
+            width: 100%;
+            animation: scroll-up 20s linear infinite;
+            /* Increased animation duration to allow the entire text to go through */
+            font-family: 'League Gothic', sans-serif;
+        }
+
+        .contact-form {
+            position: absolute;
+            top: 160px;
+            left: 0;
+            width: 100px;
+            /* adjust this as necessary */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+        }
+
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @keyframes scroll-up {
+            0% {
+                transform: translateY(100%);
+            }
+
+            100% {
+                transform: translateY(-100%);
+                /* Changed to -100% to cover the entire text height */
+            }
+        }
