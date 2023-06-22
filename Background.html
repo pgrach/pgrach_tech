@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        header {
+            border: 5px red double;
+            width: 50%;
+            margin: auto;
+        }
+        img {
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .box { 
+            background-color: aquamarine;
+            border: green 5px double;
+            margin: 5px 0px;
+            padding: 20px;
+            width:25%;
+            display: inline-block;
+            float: left;
+        }
+
+        .container {
+            border: 4px black double;
+            margin: 2px auto;
+            width: 1000px;
+        }
+
+        .container::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="top">
+        <h3>Welcome to Pauls Blog</h3>
+        <img src="https://images.pexels.com/photos/235986/pexels-photo-235986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image">
+    </header>
+    
+    <div class="container">
+        <div class="box">
+            <h3> Heading 1
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quia nulla magni consectetur laboriosam architecto ipsum modi iure et reprehenderit illo, incidunt suscipit assumenda qui possimus quisquam earum sit enim.</p>
+        </div>
+        <div class="box">
+            <h3> Heading 2
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quia nulla magni consectetur laboriosam architecto ipsum modi iure et reprehenderit illo, incidunt suscipit assumenda qui possimus quisquam earum sit enim.</p>
+        </div>
+        <div class="box">
+            <h3> Heading 3
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quia nulla magni consectetur laboriosam architecto ipsum modi iure et reprehenderit illo, incidunt suscipit assumenda qui possimus quisquam earum sit enim.</p>
+        </div>
+    </div>
+    
+</body>
+</html>
