@@ -3,19 +3,21 @@
             list-style-type: none;
 
         }
+
         html {
             background: linear-gradient(45deg, #3f87a6, #ebf8e1, #f69d3c);
             background-size: 600% 600%;
             animation: gradient 15s ease infinite;
         }
-        
+
         body {
+            overflow: auto;
             background: transparent;
             font-family: Arial, sans-serif;
             color: #333;
             margin: 0;
             padding: 0;
-            position: relative;
+            height: 100vh;
         }
 
         @keyframes gradient {
@@ -35,17 +37,17 @@
         .wrapper {
             display: flex;
             height: 100%;
-        }        
+            overflow: hidden;
+        }
 
         .sidebar {
-            position: relative;
-            flex: 0 0 30%;
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 20px;
+            position: sticky;
+            top:0;
+            background-color: transparent;
+            width: 20%;
             box-sizing: border-box;
-            position: fixed;
-            height: 100%;
-            overflow: auto;
+            height: 100vh;
+            overflow-x: hidden;
         }
 
         .animation-container {
@@ -92,17 +94,17 @@
         }
 
         .main-content {
-            flex: 1 1 auto;
-            padding: 20px;
-            padding-left: calc(30% + 20px); /* this value should match the sidebar width plus the desired padding */
+            overflow: auto;
+            width: 80%;
             box-sizing: border-box;
-            height: 100%;
+            height: 100vh;
+            overflow: auto;
         }
 
         .main-content section {
             margin-bottom: 10%;
-        }        
-        
+        }
+
         .container {
             max-width: 1000px;
             margin: 40px auto;
@@ -147,4 +149,21 @@
                 transform: translateY(-100%);
                 /* Changed to -100% to cover the entire text height */
             }
+        }
+
+        @media screen and (max-width: 768px) {
+            .wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: 40%;
+            }
+
+            .main-content {
+                padding-left: 20px;
+            }
+
         }

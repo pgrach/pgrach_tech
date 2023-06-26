@@ -85,20 +85,20 @@
                 <div class="container">
                     <!-- Project 1 -->
                     <div class="project-card">
-                        <img src="/html/images/duc1.png" alt="Project 1">
+                        <img src="/images/duc1.png" alt="Project 1">
                         <h3>Ballet National Folklorique du Luxembourg</h3>
                         <p>Description of Project 1...</p>
                     </div>
 
                     <!-- Project 2 -->
                     <div class="project-card">
-                        <img src="/html/images/melusine.png" alt="Project 2">
+                        <img src="/images/melusine.png" alt="Project 2">
                         <h3>Project 2</h3>
                         <p>Description of Project 2...</p>
                     </div>
                     <!-- Project 3 -->
                     <div class="project-card">
-                        <img src="/html/images/pgrache_A_charming_imp_Kropemann_from_Luxembourg_folklore_is_ho_c9529702-7678-4fb0-955d-8fa2a1615578.png"
+                        <img src="/images/pgrache_A_charming_imp_Kropemann_from_Luxembourg_folklore_is_ho_c9529702-7678-4fb0-955d-8fa2a1615578.png"
                             alt="Project 3">
                         <h3>Project 3</h3>
                         <p>Description of Project 3...</p>
@@ -106,7 +106,7 @@
 
                     <!-- Project 4 -->
                     <div class="project-card">
-                        <img src="/html/images/pgrache_as_sketch_on_white_background_0bcbb6f2-9367-4247-a7df-51cf059ef236.png"
+                        <img src="/images/pgrache_as_sketch_on_white_background_0bcbb6f2-9367-4247-a7df-51cf059ef236.png"
                             alt="Project 4">
                         <h3>Project 4</h3>
                         <p>Description of Project 4...</p>
@@ -117,5 +117,15 @@
         </div>
     </div>
 </body>
+
+<script>
+    window.addEventListener('wheel', function (e) {
+        var mainContent = document.querySelector('.main-content');
+        if (mainContent) {
+            mainContent.scrollTop += e.deltaY;
+            e.preventDefault(); // prevent the default scroll behavior
+        }
+    }, { passive: false }); // to make e.preventDefault() work in passive mode
+</script>
 
 </html>
