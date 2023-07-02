@@ -1,7 +1,8 @@
         * {
             text-decoration: none;
             list-style-type: none;
-
+            margin: 0;
+            padding: 0;
         }
 
         html {
@@ -11,14 +12,23 @@
         }
 
         body {
-            overflow: auto;
+            display: flex;
             background: transparent;
             font-family: Arial, sans-serif;
             color: #333;
             margin: 0;
-            padding: 0;
-            height: 100vh;
+            padding: 2%;
+            overflow-x: hidden;
+            justify-content: center;
+            width: 100%;
+            max-width: 1250px;
         }
+
+        .container {
+            display: flex;
+            max-width: 1280px;
+            width: 100%;
+        }        
 
         @keyframes gradient {
             0% {
@@ -34,20 +44,30 @@
             }
         }
 
-        .wrapper {
-            display: flex;
-            height: 100%;
-            overflow: hidden;
+        .sidebar {
+            background-color: transparent;
+            width: 25%;
+            box-sizing: border-box;
         }
 
-        .sidebar {
-            position: sticky;
-            top:0;
-            background-color: transparent;
-            width: 20%;
-            box-sizing: border-box;
-            height: 100vh;
-            overflow-x: hidden;
+        .sidebar * {
+            padding-bottom: 1rem;
+        }        
+
+        .socialMedia {
+            display: flex;
+        }
+
+        .w-6 {
+            width: 1.5rem;
+            --tw-text-opacity: 1;
+            color: rgb(148 163 184/var(--tw-text-opacity));
+        }
+
+        .h-6 {
+            height: 1.5rem;
+            --tw-text-opacity: 1;
+            color: rgb(148 163 184/var(--tw-text-opacity));
         }
 
         .animation-container {
@@ -94,11 +114,12 @@
         }
 
         .main-content {
-            overflow: auto;
-            width: 80%;
+            width: 75%;
             box-sizing: border-box;
-            height: 100vh;
-            overflow: auto;
+        }
+
+        #about-me > * {
+            padding-bottom: 5%;
         }
 
         .main-content section {
@@ -152,18 +173,18 @@
         }
 
         @media screen and (max-width: 768px) {
-            .wrapper {
+            body {
                 flex-direction: column;
+                display: block;
             }
 
             .sidebar {
-                position: static;
-                width: 100%;
-                height: 40%;
+                position: relative;
+                height: auto;
             }
 
+            .sidebar,
             .main-content {
-                padding-left: 20px;
+                width: 100%;
             }
-
         }
