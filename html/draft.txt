@@ -1,0 +1,70 @@
+        <!-- <div class="contact-form">
+            <form id="contactForm">
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Send">
+                <input type="reset" value="Clear">
+            </form>
+        </div>
+        <div class="fixed-text">
+            <p>Why are you here?</p>
+        </div>
+        <div class="animation-container">
+            <div class="animated-text">
+                <p>'googled pavel grachev'</p>
+                <p>'you followed a link'</p>
+                <p>'you are my friend'</p>
+                <p>'you want to hire me'</p>
+                <p>'someone told you about me'</p>
+                <p>'you are looking for a co-founder'</p>
+                <p>'your cat jumped on keyboard'</p>
+            </div>
+
+        </div> -->
+
+
+                .contact-form {
+            position: absolute;
+            top: 55%;
+            left: 0;
+            width: 100px;
+            /* adjust this as necessary */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1001;
+        }
+
+        .contact-form input[type="email"],
+        .contact-form textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .animation-container {
+            position: absolute;
+            top: 52%;
+            left: 31%;
+            height: 2%;
+            overflow: hidden;
+            width: 80%;
+            z-index: 1002;
+        }
+
+        .fixed-text {
+            font-family: 'League Gothic', sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            z-index: 1002;
+        }
+
+        .animated-text {
+            position: absolute;
+            width: 100%;
+            animation: scroll-up 20s linear infinite;
+            font-family: 'League Gothic', sans-serif;
+        }
+
