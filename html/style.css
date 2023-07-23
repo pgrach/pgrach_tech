@@ -12,18 +12,24 @@
         }
 
         body {
-            display: flex;
             background: transparent;
             font-family: Arial, sans-serif;
             color: #333;
             margin: 0;
             padding: 2%;
             overflow-x: hidden;
+            display: flex;
             justify-content: center;
             width: 100%;
             max-width: 1250px;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */        
         }
 
+        body::-webkit-scrollbar {
+            display: none;
+        }
+        
         @keyframes gradient {
             0% {
                 background-position: 0% 50%;
@@ -38,8 +44,18 @@
             }
         }
 
-        .sidebar {
+        .content {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            max-height: 100vh;
+            /* Adjust as necessary */
+            overflow-y: auto;
+        }
 
+        .sidebar {
+            position: sticky;
+            top: 0;
             background-color: transparent;
             width: 25%;
             box-sizing: border-box;
@@ -68,7 +84,15 @@
         .main-content {
             width: 75%;
             box-sizing: border-box;
+            flex-shrink: 0; /* prevent the main content from shrinking if sidebar gets bigger */
+            overflow-y: auto; /* add scrollability */
+            max-height: 100vh; /* ensure it doesn't overflow the viewport vertically */
+            scrollbar-width: none; /* for Firefox */
         }
+
+        .main-content::-webkit-scrollbar {
+            display: none;
+        }        
 
         #about-me>* {
             padding-bottom: 5%;
@@ -113,22 +137,17 @@
             line-height: 1.5;
         }
 
-        @keyframes scroll-up {
-            0% {
-                transform: translateY(100%);
-            }
-
-            100% {
-                transform: translateY(-100%);
-                /* Changed to -100% to cover the entire text height */
-            }
-        }
-
         @media screen and (max-width: 768px) {
             body {
                 flex-direction: column;
                 display: block;
+                max-height: none;
             }
+
+            .content {
+                flex-direction: column;
+                max-height: none;
+            }        
 
             .sidebar {
                 position: relative;

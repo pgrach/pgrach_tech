@@ -68,3 +68,14 @@
             font-family: 'League Gothic', sans-serif;
         }
 
+
+@keyframes scroll-up {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+        /* Changed to -100% to cover the entire text height */
+    }
+}
