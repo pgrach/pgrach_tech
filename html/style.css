@@ -16,19 +16,22 @@
             font-family: Arial, sans-serif;
             color: #333;
             margin: 0;
-            padding: 0; /* Adjusted this */
+            padding: 0;
+            /* Adjusted this */
             overflow-x: hidden;
             display: flex;
             justify-content: center;
             width: 100%;
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */        
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
         }
 
         body::-webkit-scrollbar {
             display: none;
         }
-        
+
         @keyframes gradient {
             0% {
                 background-position: 0% 50%;
@@ -46,9 +49,11 @@
         .content {
             display: flex;
             justify-content: center;
-            max-width: 1250px; /* Adjusted this */
+            max-width: 1250px;
+            /* Adjusted this */
             max-height: 100vh;
-            padding: 2%; /* Added this here */
+            padding: 2%;
+            /* Added this here */
         }
 
         .sidebar {
@@ -82,32 +87,73 @@
         .main-content {
             width: 75%;
             box-sizing: border-box;
-            flex-shrink: 0; /* prevent the main content from shrinking if sidebar gets bigger */
-            overflow-y: auto; /* add scrollability */
-            max-height: 100vh; /* ensure it doesn't overflow the viewport vertically */
-            scrollbar-width: none; /* for Firefox */
+            flex-shrink: 0;
+            /* prevent the main content from shrinking if sidebar gets bigger */
+            overflow-y: auto;
+            /* add scrollability */
+            max-height: 100vh;
+            /* ensure it doesn't overflow the viewport vertically */
+            scrollbar-width: none;
+            /* for Firefox */
         }
 
         .main-content::-webkit-scrollbar {
             display: none;
-        }     
+        }
 
         .main-content p {
-            margin-top: 1%;  /* Adjust this value as needed */
+            margin-top: 1%;
+            /* Adjust this value as needed */
         }
 
         .section-title {
             display: none;
             margin: 0;
-            padding: 3% 0;        
+            padding: 3% 0;
         }
-        
+
         #about-me>* {
             padding-bottom: 5%;
         }
 
         .main-content section {
             margin-bottom: 10%;
+        }
+
+        .experience-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .experience-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            transform: scale(1.03);
+        }
+
+        .experience-item h3 {
+            margin: 0;
+            flex-basis: 20%;  /* adjust as needed */
+            text-align: left;
+        }
+        
+        .experience-content {
+            flex-basis: 70%;  /* adjust as needed */
+        }
+        
+        .experience-content h4, 
+        .experience-content p {
+            margin: 0;
         }
 
         .container {
@@ -155,7 +201,7 @@
             .content {
                 flex-direction: column;
                 max-height: none;
-            }        
+            }
 
             .sidebar {
                 position: static;
@@ -164,7 +210,7 @@
 
             .sidebar,
             .main-content {
-                width: 100%; 
+                width: 100%;
                 position: static;
             }
 
@@ -172,9 +218,21 @@
             .section-title {
                 display: block;
             }
+
             .sidebar nav li {
                 display: none;
             }
+
+            .experience-item {
+                flex-direction: column;
+            }
         
+            .experience-item h3 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
         
+            .experience-content {
+                text-align: center;
+            }
         }
