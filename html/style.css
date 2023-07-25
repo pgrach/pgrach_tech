@@ -119,12 +119,6 @@
 
         /* Experience section styling: */
 
-        /* .experience-section {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        } */
-
         .experience-item {
             display: flex;
             justify-content: space-between;
@@ -140,12 +134,20 @@
             transform: scale(1.03);
         }
 
-        .experience-item h3 {
-            margin: 0;
+        .heading-container {
             flex-basis: 20%;
             /* adjust as needed */
-            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
         }
+
+        .heading-container h3,
+        .heading-container h4 {
+            margin: 0;
+        }
+
 
         .experience-content {
             flex-basis: 70%;
@@ -193,6 +195,28 @@
             font-size: 0.9em;
             line-height: 1.5;
         }
+
+        .nav-indicator {
+            display: inline-block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease;
+        }        
+
+        .nav-indicator:hover {
+            color: #007BFF; /* change color when hover */
+        }        
+
+        .nav-indicator.active {
+            color: #FF6347; /* change color when it's active */
+            border-bottom: 2px solid #FF6347; /* add a bottom border to indicate the active state */
+        }
+        
+        .nav-indicator:focus {
+            outline: none; /* remove the default focus outline */
+            box-shadow: 0 0 0 2px rgba(0,123,255,.5); /* add a custom focus outline */
+        }        
 
         @media screen and (max-width: 768px) {
             body {
