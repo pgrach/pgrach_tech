@@ -50,10 +50,7 @@
             display: flex;
             justify-content: center;
             max-width: 1250px;
-            /* Adjusted this */
             max-height: 100vh;
-            padding: 2%;
-            /* Added this here */
         }
 
         .sidebar {
@@ -120,11 +117,13 @@
             margin-bottom: 10%;
         }
 
-        .experience-section {
+        /* Experience section styling: */
+
+        /* .experience-section {
             display: flex;
             flex-direction: column;
             gap: 20px;
-        }
+        } */
 
         .experience-item {
             display: flex;
@@ -133,7 +132,7 @@
             border: 1px solid #ccc;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
+            background-color: transparent;
             transition: all 0.3s ease;
         }
 
@@ -143,20 +142,24 @@
 
         .experience-item h3 {
             margin: 0;
-            flex-basis: 20%;  /* adjust as needed */
+            flex-basis: 20%;
+            /* adjust as needed */
             text-align: left;
         }
-        
+
         .experience-content {
-            flex-basis: 70%;  /* adjust as needed */
+            flex-basis: 70%;
+            /* adjust as needed */
         }
-        
-        .experience-content h4, 
+
+        .experience-content h4,
         .experience-content p {
             margin: 0;
         }
 
         .container {
+            margin: 0 auto;
+            padding: 40px 0;
             max-width: 1000px;
             margin: 40px auto;
             display: flex;
@@ -226,12 +229,12 @@
             .experience-item {
                 flex-direction: column;
             }
-        
+
             .experience-item h3 {
                 text-align: center;
                 margin-bottom: 20px;
             }
-        
+
             .experience-content {
                 text-align: center;
             }

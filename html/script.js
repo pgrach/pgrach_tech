@@ -14,3 +14,18 @@ window.addEventListener("wheel", function (e) {
     // Prevent the default scrolling behaviour
     e.preventDefault();
 }, { passive: false }); // "passive: false" makes it so you can call preventDefault inside the handler
+
+
+// This script prevents the default hyperlink behavior 
+// and instead scrolls the .main-content to the appropriate 
+// id when a link is clicked on the sidebar.
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+});
