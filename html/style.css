@@ -6,18 +6,17 @@
         }
 
         html {
-            background: linear-gradient(45deg, rgb(15 23 42), rgba(29, 78, 216, 0.15), rgba(29, 79, 216, 0.544));
-            background-size: 600% 600%;
-            animation: gradient 15s ease infinite;
+            background: rgb(15 23 42);
         }
 
         body {
             background: transparent;
             font-family: Arial, sans-serif;
-            color: #333;
+            color: #c1c4cc;
+            line-height: 1.7;
+            margin: 1em 0;
             margin: 0;
             padding: 0;
-            /* Adjusted this */
             overflow-x: hidden;
             display: flex;
             justify-content: center;
@@ -57,7 +56,7 @@
             position: sticky;
             top: 0;
             background-color: transparent;
-            width: 25%;
+            width: 30%;
             box-sizing: border-box;
         }
 
@@ -82,7 +81,7 @@
         }
 
         .main-content {
-            width: 75%;
+            width: 70%;
             box-sizing: border-box;
             flex-shrink: 0;
             /* prevent the main content from shrinking if sidebar gets bigger */
@@ -123,15 +122,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border: 1px solid #ccc;
-            padding: 20px;
+            padding: 1rem;
+            margin: 1rem;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background-color: transparent;
             transition: all 0.3s ease;
+            min-height: 21rem;
+            /* making boxes the same size */
+            border: 1px solid transparent;
+            /* avoiding jumping  */
+
         }
 
         .experience-item:hover {
-            transform: scale(1.03);
+            border-radius: .25rem;
+            border: 1px solid rgba(208, 203, 203, 0.05);
+            background-color: rgba(208, 203, 203, 0.05);
+            transition: all 0.3s ease;
         }
 
         .heading-container {
@@ -147,7 +154,6 @@
         .heading-container h4 {
             margin: 0;
         }
-
 
         .experience-content {
             flex-basis: 70%;
@@ -170,6 +176,7 @@
         }
 
         .project-card {
+            border-radius: .25rem;
             background-color: #fff;
             margin: 20px 0;
             padding: 20px;
@@ -202,21 +209,42 @@
             text-decoration: none;
             color: #333;
             transition: color 0.3s ease;
-        }        
+        }
 
         .nav-indicator:hover {
-            color: #007BFF; /* change color when hover */
-        }        
+            color: #007BFF;
+            /* change color when hover */
+        }
 
         .nav-indicator.active {
-            color: #FF6347; /* change color when it's active */
-            border-bottom: 2px solid #FF6347; /* add a bottom border to indicate the active state */
+            color: #FF6347;
+            /* change color when it's active */
+            border-bottom: 2px solid #FF6347;
+            /* add a bottom border to indicate the active state */
         }
-        
+
         .nav-indicator:focus {
-            outline: none; /* remove the default focus outline */
-            box-shadow: 0 0 0 2px rgba(0,123,255,.5); /* add a custom focus outline */
-        }        
+            outline: none;
+            /* remove the default focus outline */
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, .5);
+            /* add a custom focus outline */
+        }
+
+
+        @media screen and (min-width: 769px) {
+            .main-content {
+                padding-left: 10%;
+            }
+
+/* SETTING THE TOP PADDINGS FOR WIDE SCREEN */
+        .main-content section {
+            padding-top: 6rem;
+        }
+        .sidebar {
+            padding-top: 6rem;
+        }
+
+        }
 
         @media screen and (max-width: 768px) {
             body {
