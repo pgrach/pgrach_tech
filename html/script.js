@@ -1,3 +1,41 @@
+// Menu navigation
+document.addEventListener("DOMContentLoaded", function () {
+    // Get all sections and navigation links
+    const sections = document.querySelectorAll('#about-me, #experience, #projects')
+    const navLinks = document.querySelectorAll('.nav-indicator')
+
+    // Define the Intersection Observer
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+
+                // Get the corresponding navigation link
+                const id = entry.target.id;
+                const activeLink = document.querySelector(`.nav-indicator[href="#${id}"]`)
+
+                // Add the active class to the navigation link
+                activeLink.classList.add('active')
+
+                // Remove the active class from all other links
+                navLinks.forEach(link => {
+                    if (link != activeLink) {
+                        link.classList.remove('active')
+                    }
+                })
+            }
+        })
+    }, {
+        threshold: 0.7  // Adjust as needed
+    });
+
+    // Observe each section
+    sections.forEach(section => {
+        observer.observe(section)
+    })
+})
+
+
+
 window.addEventListener("wheel", function (e) {
     // Only activate for screens wider than 768px
     if (window.innerWidth <= 768) return;
