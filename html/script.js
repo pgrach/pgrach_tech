@@ -1,4 +1,4 @@
-// Menu navigation
+// Menu links responsiveness
 document.addEventListener("DOMContentLoaded", function () {
     // Get all sections and navigation links
     const sections = document.querySelectorAll('#about-me, #experience, #projects')
