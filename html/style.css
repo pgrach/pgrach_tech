@@ -58,22 +58,31 @@
             background-color: transparent;
             width: 30%;
             box-sizing: border-box;
+            color:  rgba(208, 203, 203, 0.05);
         }
 
-        .sidebar a {
-            color:  #c1c4cc;
-            /* Makes the link color the same as the surrounding text */
-        }
-
-        .sidebar h1 {
+        .sidebar h1 a {
             font-size: 3rem;
             line-height: 1;
+            color:  #c1c4cc;
         }
+
+        .sidebar p a {
+            color:  #c1c4cc;
+        }
+
+/* Icons Area */
 
         .socialMedia {
             display: flex;
             padding-top: 1rem;
         }
+
+        .jokeTransIcons {
+            display: flex;
+            padding-top: 1rem;
+        }
+
 
         .socialMedia a svg {
             transition: fill 0.3s ease;
