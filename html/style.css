@@ -11,7 +11,7 @@
 
         body {
             background: transparent;
-            font-family: Arial, sans-serif;
+            font-family: sans-serif;
             color: #c1c4cc;
             line-height: 1.7;
             margin: 1em 0;
@@ -60,23 +60,35 @@
             box-sizing: border-box;
         }
 
+        .sidebar a {
+            color:  #c1c4cc;
+            /* Makes the link color the same as the surrounding text */
+        }
+
         .sidebar h1 {
             font-size: 3rem;
             line-height: 1;
         }
 
-        .sidebar * {
-            padding-bottom: 1rem;
-        }
-
         .socialMedia {
             display: flex;
+            padding-top: 1rem;
+        }
+
+        .socialMedia a svg {
+            transition: fill 0.3s ease;
+        }
+
+        .socialMedia a:hover svg {
+            fill: #007BFF;
+            transition: all 0.3s ease;
         }
 
         .w-6 {
             width: 1.5rem;
             --tw-text-opacity: 1;
             color: rgb(148 163 184/var(--tw-text-opacity));
+            padding-right: 0.5rem;
         }
 
         .h-6 {
@@ -158,6 +170,7 @@
         .heading-container h3,
         .heading-container h4 {
             margin: 0;
+            width: 9rem;
         }
 
         .experience-content {
@@ -182,7 +195,7 @@
 
         .project-card {
             border-radius: .25rem;
-            background-color: #fff;
+            background-color: rgba(208, 203, 203, 0.05);
             margin: 20px 0;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -208,12 +221,26 @@
             line-height: 1.5;
         }
 
+        .main-content a,
+        h4 {
+            font-weight: bold;
+            color: #c1c4cc;
+            text-decoration: none;
+        }
+
+        .main-content a:hover {
+            color: #007BFF;
+            /* change the color of the link text */
+            text-decoration: none;
+            /* underline the link text */
+        }
+
         .nav-indicator {
             display: inline-block;
-            padding: 10px 15px;
             text-decoration: none;
-            color: #333;
+            color: rgba(208, 203, 203, 0.05);
             transition: color 0.3s ease;
+            padding-top: 1rem;
         }
 
         .nav-indicator:hover {
@@ -222,8 +249,10 @@
         }
 
         .nav-indicator.active {
-            color: #007BFF; /*Change color when it's active*/
-            border-bottom: 2px solid #007BFF; /*Add a bottom border to indicate the active state */
+            color: #007BFF;
+            /*Change color when it's active*/
+            border-bottom: 2px solid #007BFF;
+            /*Add a bottom border to indicate the active state */
         }
 
         .nav-indicator:focus {
