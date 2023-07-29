@@ -11,13 +11,16 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap" rel="stylesheet">
     <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="content">
         <header class="sidebar">
             <h1><a href="#about-me">Pavel Grachev</a></h1>
-            <p><a href="#about-me">Projects I built or helped to build</a></p>
+            <p><a href="#about-me">Problem Solver | Software Developer</a></p>
             <nav>
                 <ul>
                     <li><a class="nav-indicator" href="#about-me">About</a></li>
@@ -52,6 +55,7 @@
 
         <main class="main-content">
             <section id="about-me">
+                <span class="observer-target" id="observer-about-me"></span>
                 <h3 class="section-title">ABOUT</h3>
                 <p>Hey there! After beginning my career in finance as an auditor, I pivoted into industrial
                     manufacturing and project management, leading me to launch two startups in the cryptocurrency mining
@@ -60,15 +64,17 @@
                 </p>
                 <p>Most recently, I completed an intensive 12-week software developer bootcamp, acquiring
                     skills in HTML, CSS, JavaScript, Python, and SQL. I continue to deepen my programming knowledge
-                    through initiatives like #100DaysOfCode by Replit, and AI-powered tools.
+                    through initiatives like #100DaysOfCode by Replit, and exploring AI-powered tools.
                 </p>
                 <p>I speak three languages and have a generalist outlook, always exploring new technologies and
                     possibilities. While optimistic about my millennial generation's ability to democratize technology
                     and information, I believe focused effort and perseverance are key to driving progress.
 
                 </p>
+                </span>
             </section>
             <section id="experience">
+                <span class="observer-target" id="observer-experience"></span>
                 <h3 class="section-title">EXPERIENCE</h3>
                 <ul class="experience-list">
                     <li class="experience-item">
@@ -94,10 +100,10 @@
                             <p>Founded startups in <a href="https://cyberianmine.de/" target="_blank"
                                     rel="noopener noreferrer">Berlin</a> and <a href="https://krater.io/"
                                     target="_blank" rel="noopener noreferrer">Delaware</a> providing crypto mining
-                                services
-                                Built marketplace platforms to manage 200+ user accounts.
-                                Implemented automation to monitor thousands of units of hardware: energy and uptime
-                                reporting, invoicing.
+                                services. Developed a marketplace platform capable of managing 200+ user accounts and
+                                implemented
+                                automation for energy and uptime reporting as well as invoicing, handling thousands of
+                                hardware units.
                             </p>
                         </div>
                     </li>
@@ -123,6 +129,7 @@
 
             </section>
             <section id="projects">
+                <span class="observer-target" id="observer-projects"></span>
                 <h3 class="section-title">PROJECTS</h3>
                 <div class="container">
 
@@ -132,11 +139,10 @@
                                 alt="Project 3">
                             <h3>Joke Transformer</h3>
                         </a>
-                        <p>an interactive web application that allows users to alter and rephrase jokes. The
-                            app fetches a joke from an external API, lets users highlight portions of the text and
-                            provide alternatives, and then utilizes OpenAI's language model to integrate those changes
-                            and output a creatively transformed joke. It also features a dark mode toggle for improved
-                            UX</p>
+                        <p>An interactive web application that lets users rephrase jokes fetched from an external API.
+                            With an option to provide alternative phrases, the app utilizes OpenAI's language model to
+                            output creatively transformed jokes, featuring a dark mode toggle for enhanced UX.
+                        </p>
                         <ul class="projectIcons">
                             <li><a href="https://platform.openai.com/docs/introduction" target="_blank"
                                     rel="noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
@@ -167,10 +173,10 @@
                                 alt="Project 4">
                             <h3>JS OpenAI trainer</h3>
                         </a>
-                        <p>a beginner-friendly tool that serves as a practical starting point for
-                            beginners in JS looking to interact with OpenAI's API. It provides a simple interaction with
-                            OpenAI's GPT-3 by asking questions and retrieving AI's responses. The project also includes
-                            a detailed README for those new to handling server-side and client-side environments
+                        <p>Created a beginner-friendly tool that provides a practical starting point for those
+                            interested in working with OpenAI's API using JS. The tool enables users to interact with
+                            OpenAI's GPT-3 by asking questions and retrieving responses. The project also offers a
+                            comprehensive README for novices dealing with server-side and client-side environments.
                         </p>
                         <ul class="projectIcons">
                             <li><a href="https://platform.openai.com/docs/introduction" target="_blank"
@@ -202,20 +208,17 @@
                                         </path>
                                     </svg></a></li>
                     </div>
-
+                    </span>
                     <div class="project-card">
                         <a href="https://www.motiohead.com/how-to-create-a-storyboard-for-a-video/" target="_blank"
-                            rel="noopener noreferrer"><img
-                                src="/images/regenerate storyboard.gif"
-                                alt="Project 3"><img
-                                src="/images/edit_gif.gif"
-                                alt="Project 3">
+                            rel="noopener noreferrer"><img src="/images/regenerate storyboard.gif" alt="Project 3"><img
+                                src="/images/edit_gif.gif" alt="Project 3">
                             <h3>Storyboard Assistant</h3>
                         </a>
-                        <p>The tool utilizes text, image and voice genAI models to streamline the storyboarding process
-                            for video creators. As project manager, I led the MVP stage from ideation to beta launch,
-                            focusing on product strategy, and guiding the engineering team. This experience inspired
-                            me to pursue software development skills.
+                        <p>As the project manager for this venture, led the development of a tool that streamlines the
+                            storyboarding process for video creators using text, image, and voice genAI models. Managed
+                            the MVP stage from ideation to beta launch, focusing on product strategy, and steering the
+                            engineering team.
                         </p>
                         <ul class="projectIcons">
                             <li><a href="https://platform.openai.com/docs/introduction" target="_blank"
@@ -297,7 +300,7 @@
                                 src="/images/duc1.png" alt="Project 1">
                             <h3>Ballet National Folklorique du Luxembourg</h3>
                         </a>
-                        <p>is the digital home for the National Folklore Ballet of Luxembourg. Domain name reserved.
+                        <p>This is a digital home for the National Folklore Ballet of Luxembourg. Domain name reserved.
                             Content is brewing at <a href="https://simonemousset.com/" target="_blank"
                                 rel="noopener noreferrer">simonemousset.com</a></p>
                     </div>
