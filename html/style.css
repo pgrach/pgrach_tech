@@ -87,11 +87,11 @@
         }
 
 
-        .socialMedia a svg {
+        .socialMedia a svg, .projectIcons a svg{
             transition: fill 0.3s ease;
         }
 
-        .socialMedia a:hover svg {
+        .socialMedia a:hover svg, .projectIcons a:hover svg {
             fill: #007BFF;
             transition: all 0.3s ease;
         }
@@ -245,11 +245,13 @@
             font-weight: bold;
             color: #c1c4cc;
             text-decoration: none;
+            transition: all 0.3s ease;
         }
 
         .main-content a:hover {
             color: #007BFF;
             /* change the color of the link text */
+            transition: all 0.3s ease;
             text-decoration: none;
             /* underline the link text */
         }
