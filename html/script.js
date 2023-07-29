@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }, {
-        threshold: 0.6  // Adjust is some bugs come up with activation
+        threshold: 0.4  // Adjust is some bugs come up with activation
     });
 
     // Observe each section
