@@ -59,6 +59,7 @@
             width: 30%;
             box-sizing: border-box;
             color:  rgba(208, 203, 203, 0.05);
+            margin-left: 1rem;
         }
 
         .sidebar h1 a {
@@ -149,7 +150,6 @@
         .experience-item {
             display: flex;
             justify-content: space-between;
-            align-items: center;
             padding: 1rem;
             margin: 1rem;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
