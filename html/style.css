@@ -81,6 +81,8 @@
         .projectIcons {
             display: flex;
             padding-top: 1rem;
+            
+            justify-content: flex-start;  /* This aligns the icons to the left */
         }
 
 
@@ -194,9 +196,9 @@
 
         .container {
             margin: 0 auto;
-            padding: 40px 0;
-            max-width: 1000px;
-            margin: 40px auto;
+            padding: 0 0;
+            /* max-width: 1000px; */
+            /* margin: 40px auto; */
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
@@ -205,12 +207,18 @@
         .project-card {
             border-radius: .25rem;
             background-color: rgba(208, 203, 203, 0.05);
-            margin: 20px 0;
-            padding: 20px;
+            margin: 1rem 0;
+            padding: 1rem;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            flex: 1 1 calc(20% - 40px);
+            flex: 1 0 40%;
             margin: 20px;
             transition: all 0.3s ease;
+            min-width: 30%;
+            
+            display: flex;
+            flex-direction: column;   /* To arrange the content in a column */
+            justify-content: space-between;   /* This will push your content to the edges of your card */
+            height: 100%;    /* This will occupy the full height of parent. */
         }
 
         .project-card:hover {
@@ -219,6 +227,8 @@
 
         .project-card img {
             max-width: 100%;
+            display: block;
+            margin: 0 auto;        
         }
 
         .project-card h3 {
