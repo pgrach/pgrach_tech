@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Define the Intersection Observer
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
+            console.log(`Observing: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}`);
             if (entry.isIntersecting) {
 
                 // Get the corresponding navigation link
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
     }, {
-        threshold: 0.7  // Adjust as needed
+        threshold: 0.6  // Adjust is some bugs come up with activation
     });
 
     // Observe each section
