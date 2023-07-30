@@ -58,21 +58,21 @@
             background-color: transparent;
             width: 30%;
             box-sizing: border-box;
-            color:  rgba(208, 203, 203, 0.05);
+            color: rgba(208, 203, 203, 0.05);
             margin-left: 1rem;
         }
 
         .sidebar h1 a {
             font-size: 3rem;
             line-height: 1;
-            color:  #c1c4cc;
+            color: #c1c4cc;
         }
 
         .sidebar p a {
-            color:  #c1c4cc;
+            color: #c1c4cc;
         }
 
-/* Icons Area */
+        /* Icons Area */
 
         .socialMedia {
             display: flex;
@@ -82,16 +82,19 @@
         .projectIcons {
             display: flex;
             padding-top: 1rem;
-            
-            justify-content: flex-start;  /* This aligns the icons to the left */
+
+            justify-content: flex-start;
+            /* This aligns the icons to the left */
         }
 
 
-        .socialMedia a svg, .projectIcons a svg{
+        .socialMedia a svg,
+        .projectIcons a svg {
             transition: fill 0.3s ease;
         }
 
-        .socialMedia a:hover svg, .projectIcons a:hover svg {
+        .socialMedia a:hover svg,
+        .projectIcons a:hover svg {
             fill: #007BFF;
             transition: all 0.3s ease;
         }
@@ -214,11 +217,14 @@
             margin: 1rem;
             transition: all 0.3s ease;
             min-width: 30%;
-            
+
             display: flex;
-            flex-direction: column;   /* To arrange the content in a column */
-            justify-content: space-between;   /* This will push your content to the edges of your card */
-            height: 100%;    /* This will occupy the full height of parent. */
+            flex-direction: column;
+            /* To arrange the content in a column */
+            justify-content: space-between;
+            /* This will push your content to the edges of your card */
+            height: 100%;
+            /* This will occupy the full height of parent. */
         }
 
         .project-card:hover {
@@ -228,7 +234,7 @@
         .project-card img {
             max-width: 100%;
             display: block;
-            margin: 0 auto;        
+            margin: 0 auto;
         }
 
         .project-card h3 {
@@ -284,6 +290,11 @@
             /* add a custom focus outline */
         }
 
+        footer {
+            text-align:justify;
+            width: 40%;
+            margin-left: auto;
+        }
 
         @media screen and (min-width: 769px) {
             .main-content {
