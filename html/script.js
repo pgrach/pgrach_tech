@@ -4,12 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll('#about-me, #experience, #projects')
     const navLinks = document.querySelectorAll('.nav-indicator')
 
-    // Define the Intersection Observer
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            console.log(`Observing: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}`);
-            if (entry.isIntersecting) {
+    // Define the Intersection Observer for #about-me and #experience
+    const standardObserver = new IntersectionObserver(entries => {
+        handleIntersect(entries, 0.50);
+    }, {
+        threshold: 0.50
+    });
 
+    // Define the Intersection Observer for #projects
+    const projectsObserver = new IntersectionObserver(entries => {
+        handleIntersect(entries, 0);
+    }, {
+        threshold: 0
+    });
+
+    // Handle intersection
+    function handleIntersect(entries, threshold) {
+        entries.forEach(entry => {
+            console.log(`Observing: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}, threshold: ${threshold}`);
+            if (entry.isIntersecting) {
                 // Get the corresponding navigation link
                 const id = entry.target.id;
                 const activeLink = document.querySelector(`.nav-indicator[href="#${id}"]`)
@@ -25,16 +38,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 })
             }
         })
-    }, {
-        threshold: 0.50  // Adjust is some bugs come up with activation
-    });
+    }
 
-    // Observe each section
-    sections.forEach(section => {
-        observer.observe(section)
-    })
+    // Observe sections
+    standardObserver.observe(document.querySelector('#about-me'));
+    standardObserver.observe(document.querySelector('#experience'));
+    projectsObserver.observe(document.querySelector('#projects'));
 })
-
 
 
 window.addEventListener("wheel", function (e) {
