@@ -264,32 +264,39 @@
         }
 
         .nav-indicator {
-            display: inline-block;
+            display: flex; /* Use flex for easier alignment */
+            align-items: center; /* Vertically center the content */
             text-decoration: none;
             color: rgba(208, 203, 203, 0.692);
             transition: color 0.3s ease;
             padding-top: 1rem;
+            position: relative; /* This allows us to position the child span absolutely */
         }
-
+        
+        .nav-indicator.active {
+            color: #007BFF; /* Changes the text color when active */
+        }
+        
+        .nav-indicator::before { 
+            /* This pseudo-element will act as our "tick line" */
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px; /* Position it a bit below the text */
+            height: 2px; /* Height of the tick line */
+            width: 0; /* Default width */
+            background-color: #007BFF; 
+            transition: width 0.3s ease; /* Smooth transition for the width */
+        }
+        
+        .nav-indicator.active::before {
+            width: 50%; /* When active, it takes the full width of the nav-indicator */
+        }
+        
         .nav-indicator:hover {
             color: #007BFF;
-            /* change color when hover */
         }
-
-        .nav-indicator.active {
-            color: #007BFF;
-            /*Change color when it's active*/
-            border-bottom: 2px solid #007BFF;
-            /*Add a bottom border to indicate the active state */
-        }
-
-        .nav-indicator:focus {
-            outline: none;
-            /* remove the default focus outline */
-            box-shadow: 0 0 0 2px rgba(0, 123, 255, .5);
-            /* add a custom focus outline */
-        }
-
+                
         footer {
             text-align:justify;
             width: 40%;
