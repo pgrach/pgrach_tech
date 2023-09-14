@@ -78,3 +78,19 @@ document.querySelectorAll('.nav-indicator').forEach(link => {
         targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
+
+document.addEventListener('keydown', function(e) {
+    const mainContent = document.querySelector(".main-content")
+    const scrollAmount = 50; // adjust this value based on desired scroll amount
+
+    switch (e.key) {
+        case 'ArrowUp':
+        case 'PageUp':
+            mainContent.scrollTop -= scrollAmount
+            break;
+        case 'ArrowDown':
+        case 'PageDown':
+            mainContent.scrollTop += scrollAmount
+            break
+    }
+})

@@ -123,6 +123,7 @@
             /* ensure it doesn't overflow the viewport vertically */
             scrollbar-width: none;
             /* for Firefox */
+            scroll-behavior: smooth;
         }
 
         .main-content::-webkit-scrollbar {
@@ -290,7 +291,7 @@
         }
         
         .nav-indicator.active::before {
-            width: 50%; /* When active, it takes the full width of the nav-indicator */
+            width: 32%; /* When active, it takes the full width of the nav-indicator */
         }
         
         .nav-indicator:hover {
