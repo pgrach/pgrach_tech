@@ -68,7 +68,7 @@ window.addEventListener("wheel", function (e) {
 // This script prevents the default hyperlink behavior 
 // and instead scrolls the .main-content to the appropriate 
 // id when a link is clicked on the sidebar.
-document.querySelectorAll('.nav-link').forEach(link => {
+document.querySelectorAll('.nav-indicator').forEach(link => {
     link.addEventListener('click', function (e) {
         e.preventDefault()
 
