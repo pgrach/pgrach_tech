@@ -115,6 +115,7 @@
         .main-content {
             width: 70%;
             box-sizing: border-box;
+            font-size: 1.15rem;
             flex-shrink: 0;
             /* prevent the main content from shrinking if sidebar gets bigger */
             overflow-y: auto;
@@ -123,7 +124,6 @@
             /* ensure it doesn't overflow the viewport vertically */
             scrollbar-width: none;
             /* for Firefox */
-            scroll-behavior: smooth;
         }
 
         .main-content::-webkit-scrollbar {
@@ -171,6 +171,10 @@
             border: 1px solid rgba(208, 203, 203, 0.05);
             background-color: rgba(208, 203, 203, 0.05);
             transition: all 0.3s ease;
+        }
+
+        .experience-item:hover .experience-content h4 {
+            color: #007BFF;
         }
 
         .heading-container {
@@ -265,43 +269,53 @@
         }
 
         .nav-indicator {
-            display: flex; /* Use flex for easier alignment */
-            align-items: center; /* Vertically center the content */
+            display: flex;
+            /* Use flex for easier alignment */
+            align-items: center;
+            /* Vertically center the content */
             text-decoration: none;
             color: rgba(208, 203, 203, 0.692);
             transition: color 0.3s ease;
             padding-top: 1rem;
-            position: relative; /* This allows us to position the child span absolutely */
+            position: relative;
+            /* This allows us to position the child span absolutely */
         }
-        
+
         .nav-indicator.active {
-            color: #007BFF; /* Changes the text color when active */
+            color: #007BFF;
+            /* Changes the text color when active */
         }
-        
-        .nav-indicator::before { 
+
+        .nav-indicator::before {
             /* This pseudo-element will act as our "tick line" */
             content: '';
             position: absolute;
             left: 0;
-            bottom: -5px; /* Position it a bit below the text */
-            height: 2px; /* Height of the tick line */
-            width: 0; /* Default width */
-            background-color: #007BFF; 
-            transition: width 0.3s ease; /* Smooth transition for the width */
+            bottom: -5px;
+            /* Position it a bit below the text */
+            height: 2px;
+            /* Height of the tick line */
+            width: 0;
+            /* Default width */
+            background-color: #007BFF;
+            transition: width 0.3s ease;
+            /* Smooth transition for the width */
         }
-        
+
         .nav-indicator.active::before {
-            width: 32%; /* When active, it takes the full width of the nav-indicator */
+            width: 32%;
+            /* When active, it takes the full width of the nav-indicator */
         }
-        
+
         .nav-indicator:hover {
             color: #007BFF;
         }
-                
+
         footer {
-            text-align:justify;
+            text-align: justify;
             width: 40%;
             margin-left: auto;
+            font-size: 1rem;
         }
 
         @media screen and (min-width: 769px) {
