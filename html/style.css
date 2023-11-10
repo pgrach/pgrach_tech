@@ -252,12 +252,17 @@
             line-height: 1.5;
         }
 
+        /* Techstars logo */
         .gpt4-upgrade-notice {
-            color: #007BFF; /* Change the color as per your theme */
+            color: #007BFF; 
             font-weight: bold;
-            /* Add more styling as needed */
         }        
 
+        .project-icon-svg {
+            width: 50%; /* Adjust the width as needed */
+            height: auto; /* This will maintain the aspect ratio */
+        }
+        
         .main-content a,
         h4 {
             font-weight: bold;
