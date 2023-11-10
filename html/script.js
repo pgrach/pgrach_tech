@@ -13,9 +13,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Define the Intersection Observer for #projects
     const projectsObserver = new IntersectionObserver(entries => {
-        handleIntersect(entries, 0.2);
+        handleIntersect(entries, 0.1);
     }, {
-        threshold: 0.2
+        threshold: 0.1
     });
 
     // Handle intersection
