@@ -252,6 +252,12 @@
             line-height: 1.5;
         }
 
+        .gpt4-upgrade-notice {
+            color: #ff9800; /* Change the color as per your theme */
+            font-weight: bold;
+            /* Add more styling as needed */
+        }        
+
         .main-content a,
         h4 {
             font-weight: bold;
