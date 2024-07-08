@@ -230,7 +230,20 @@
             /* This will push your content to the edges of your card */
             height: 100%;
             /* This will occupy the full height of parent. */
+            position: relative; /* Added to position the badge absolutely */
         }
+
+        .acquired-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 5px;
+        }        
 
         .project-card:hover {
             transform: scale(1.03);
